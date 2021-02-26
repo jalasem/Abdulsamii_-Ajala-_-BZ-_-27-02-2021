@@ -1,0 +1,59 @@
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+:root {
+  font-size: 12px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#app {
+  background-color: #f9f9f9;
+  width: 31.25rem;
+  height: 100vh;
+  padding: 1.67rem 2.45rem;
+  color: #333333;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-color: #e5e5e5;
+  }
+
+  #app {
+    height: 67.67rem;
+    position: relative;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0,
+      rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-h1 {
+  font-size: 3.33rem;
+  font-weight: 700;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
