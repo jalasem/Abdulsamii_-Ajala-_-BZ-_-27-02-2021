@@ -1,4 +1,6 @@
 <template>
+  <img src="/vectors/close.svg" alt="close" class="close-button" />
+
   <img src="/vectors/umbrellaLogo.svg" alt="Umbrella" class="logo" />
   <h1 class="text-h1 text-center mb-5">So what gives?</h1>
 
@@ -44,6 +46,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  cursor: pointer;
+}
+
 .logo {
   display: block;
   margin: 8.83rem auto 3.91rem;

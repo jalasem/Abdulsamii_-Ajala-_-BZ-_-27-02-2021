@@ -23,6 +23,7 @@ body {
   height: 100vh;
   padding: 1.67rem 2.45rem;
   color: #333333;
+  position: relative;
 }
 
 @media (min-width: 376px) {
@@ -44,6 +45,10 @@ body {
   text-align: center;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .text-h1 {
   font-size: 3.33rem;
   font-weight: 700;
@@ -53,7 +58,11 @@ body {
   margin-bottom: 5rem;
 }
 
-button:focus {
-  outline: none;
-  border: none;
+button,
+input,
+select {
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }

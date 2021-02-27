@@ -1,8 +1,9 @@
 <template>
   <div
-    class="select"
+    class="card"
     v-for="(option, optionIndex) in selectOptions"
     :key="`option-${id}_${optionIndex}`"
+    @click="clickCard(answerKey, option.title)"
   >
     <img :src="option.icon" alt="" />
     <div>
@@ -16,7 +17,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "SelectField",
+  name: "CardField",
   props: {
     id: {
       type: String,
@@ -26,12 +27,20 @@ export default defineComponent({
       type: Array,
       required: true,
     },
+    answerKey: {
+      type: String,
+      required: true,
+    },
+    clickCard: {
+      type: Function,
+      required: true,
+    },
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.select {
+.card {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 1.354rem;
@@ -50,6 +59,7 @@ export default defineComponent({
     display: block;
   }
   .select-subtitle {
+    margin-top: 0.41667rem;
     display: block;
     font-size: 1rem;
   }

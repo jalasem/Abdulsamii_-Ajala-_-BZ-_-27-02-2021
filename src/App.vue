@@ -1,24 +1,31 @@
 <template>
-  <img src="/vectors/close.svg" alt="close" class="close-button" />
-  <div class="umbrella-logo" v-if="stage">
-    <img src="/vectors/umbrella.svg" alt="Umbrella" />
-    <span>Umbrella Hub</span>
-  </div>
+  <div class="App" :class="{ 'no-scroll': stage === 1 }">
+    <div class="top" v-if="stage">
+      <div class="umbrella-logo">
+        <img src="/vectors/umbrella.svg" alt="Umbrella" />
+        <span>Umbrella Hub</span>
+      </div>
+      <img src="/vectors/close.svg" alt="close" class="close-button" />
+    </div>
 
-  <IntroScreen :get-started="proceed" v-if="!stage" />
-  <SurveyForm :survey-complete="proceed" :stage="stage" v-if="stage === 1" />
+    <intro-screen :get-started="proceed" v-if="!stage" />
+    <survey-form :survey-complete="proceed" :stage="stage" v-if="stage === 1" />
+    <quotes v-if="stage === 2" />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import IntroScreen from "./components/screens/Intro.vue";
 import SurveyForm from "./components/screens/SurveyForm.vue";
+import Quotes from "./components/screens/Quotes.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     IntroScreen,
     SurveyForm,
+    Quotes,
   },
   setup() {
     const stage = ref(0);
@@ -34,11 +41,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.close-button {
-  position: absolute;
-  top: 2rem;
-  right: 2.5rem;
-  cursor: pointer;
+.App {
+  height: 100%;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.503rem;
 }
 
 .umbrella-logo {
