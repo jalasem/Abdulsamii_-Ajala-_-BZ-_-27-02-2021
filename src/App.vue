@@ -28,7 +28,7 @@ export default defineComponent({
     Quotes,
   },
   setup() {
-    const stage = ref(0);
+    const stage = ref(2);
 
     return { stage };
   },
@@ -43,6 +43,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .App {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .top {
