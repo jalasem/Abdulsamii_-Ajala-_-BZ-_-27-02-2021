@@ -5,7 +5,12 @@
         <img src="/vectors/umbrella.svg" alt="Umbrella" />
         <span>Umbrella Hub</span>
       </div>
-      <img src="/vectors/close.svg" alt="close" class="close-button" />
+      <img
+        src="/vectors/close.svg"
+        alt="close"
+        class="close-button"
+        @click="stage = 0"
+      />
     </div>
 
     <intro-screen :get-started="proceed" v-if="!stage" />
@@ -28,7 +33,7 @@ export default defineComponent({
     Quotes,
   },
   setup() {
-    const stage = ref(2);
+    const stage = ref(0);
 
     return { stage };
   },

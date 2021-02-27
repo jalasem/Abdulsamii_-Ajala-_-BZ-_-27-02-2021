@@ -123,8 +123,6 @@ export default defineComponent({
       }
 
       this.currentQuestion++;
-
-      console.log(this.formData);
     },
     submitSurvey() {
       // I'm assuming all fields are true unless proven otherwise
