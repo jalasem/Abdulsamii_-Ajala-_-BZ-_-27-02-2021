@@ -13,3 +13,21 @@ A Canadian-American insurance technology startup building the network for commer
 - Vue3
 - Typescript
 - SCSS
+
+## How to run this code
+
+### Clone the repo
+
+`git clone git@github.com:jalasem/Abdulsamii_-Ajala-_-BZ-_-27-02-2021.git briza-challenge`
+
+`cd briza-challenge`
+
+### install dependencies
+
+`npm install` or `yarn` if you have yarn installed
+
+### run the app
+
+`yarn dev`
+
+- navigate to [http://localhost:3000](http://localhost:3000) in your browser
